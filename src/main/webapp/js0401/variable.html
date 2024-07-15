@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수에 대한 사용</title>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+	//지역변수
+	//1. 선언
+	var temp;
+	//2. 값 할당 // 값 할당 시에 데이터형이 설정됨 (동적할당)
+	temp = 4;
+	//3. 값 사용
+	console.log(temp + " / 데이터 형 : " + typeof(temp));
+	document.write(temp + " / 데이터 형 : " + typeof(temp) + "<br/>");
+	/* <br> * : <script> 태그 안에서는 HTML태그를 직접 사용할 수 없다 => error */
+	
+	temp="안녕";
+	console.log(temp + " / 데이터 형 : " + typeof(temp));
+	document.write(temp + " / 데이터 형 : " + typeof(temp) + "<br/>");
+
+	temp="오늘은 월요일";
+	console.log(temp + " / 데이터 형 : " + typeof(temp));
+	document.write(temp + " / 데이터 형 : " + typeof(temp) + "<br/>");
+
+	temp=4.1;
+	console.log(temp + " / 데이터 형 : " + typeof(temp));
+	document.write(temp + " / 데이터 형 : " + typeof(temp) + "<br/>");
+
+	temp=true;
+	console.log(temp + " / 데이터 형 : " + typeof(temp));
+	document.write(temp + " / 데이터 형 : " + typeof(temp) + "<br/>");
+	
+	temp=new Date();
+	console.log(temp + " / 데이터 형 : " + typeof(temp));
+	document.write(temp + " / 데이터 형 : " + typeof(temp) + "<br/>");
+	
+	temp="오늘은 만우절";
+	
+	function test() {
+		//var 는 지역변수이지만 선언되는 위치에따라 사용가능하다.
+		alert("test " + temp);
+		var msg="내일은 화요일"; //지역변수 : 함수안에서 선언되면 함수 안에서만 사용된다.
+		//전역변수 : var를 붙이지 않고 선언하는 변수 변수명=값;
+		msg2="화창한 화요일";
+		alert(msg+ " " + msg2)
+		
+	}
+	test();
+
+	function test2() {
+		//var 는 지역변수이지만 선언되는 위치에따라 사용가능하다.
+		//alert("test2 " + temp); 
+		//alert("test함수만 지역변수 : " + msg); //함수 안에서 var로 선언한 변수는 지역변수 이므로 사용 불가능
+		alert("test 함수 안 전역변수 : " + msg2);
+	}
+	test2();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

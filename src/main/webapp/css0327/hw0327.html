@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{ width: 1000px; height: 1200px; background-color: #000000;
+		margin: 0px auto;}
+	#header{ height: 200px; background-color: #ffffff}
+	
+	#container{ width: 1000px; height: 900px; position: relative; background-color: blue}
+		#left, #right{ width: 500px; height: 900px; display: inline-block;}
+		#left{position:relative; background-color: yellow; float: left;}
+			#left1, left2, left3{width: 500px; height: 300px; display: inline-block;}
+				#left1{height: 300px; background-color: red; left: 0px;}
+				#left2{height: 300px; background-color: orange; left: 0px;}
+				#left3{height: 300px; background-color: navy; left: 0px;}
+		#right{background-color: greenyellow; float: right;}
+	
+	#footer{ height: 100px; background-color: blueviolet}
+	
+	
+	
+	#h1{height: 100px; position: relative; margin: 10px auto; text-align: center;}
+	#h2{height: 100px; position: relative; margin: 10px auto; text-align: center;}
+	
+	
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- wrap(w - 1000px, h - 1200px) -->
+		<div id="header"> header(w - 1000px, h - 200px)
+			<div id="h1"></div>
+			<div id="h2"></div>
+		</div>
+		
+		<div id="container"><!--container(w - 1000px, h - 900px)-->
+			<div id="left"><!--left(w - 500px, h - 900px)-->
+				<div id="left1">left1(w - 500px, h - 300px)</div>
+				<div id="left2">left2(w - 500px, h - 300px)</div>
+				<div id="left3">left3(w - 500px, h - 300px)</div>
+			</div>
+			<div id="right">right(w - 500px, h - 900px)
+				<div id="right1"></div>
+				<div id="right2"></div>
+				<div id="right3"></div>
+			</div>
+		</div>
+		
+		<div id="footer">footer(w - 1000px, h - 100px)</div>
+	</div>
+
+</body>
+</html>
